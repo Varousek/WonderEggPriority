@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="zaverecka.css">
+    <link rel="icon" type="png" href="zaverecka/favicon.png">
+    <script src="https://kit.fontawesome.com/2281bf1aa6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <section class="sub-header2">
+        <nav>
+            <a href="index.html"><img src="zaverecka/logo.png"></a>
+            <div class="nav-links">
+                <ul>
+                    <li> <a href="Characters.html">Characters</a></li>
+                    <li> <a href="Further.html">Further</a></li>
+                    <li> <a href="Gallery.html">Gallery</a></li>
+                    <li> <a href="Info.html">Info</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Gallery</h1>
+
+    </section>
+    <section class="gallery">
+        <div class="gallery">
+
+            <ul class="controls">
+                <li class="buttons active" data-filter="all">all</li>
+                <li class="buttons" data-filter="main-team">main-team</li>
+                <li class="buttons" data-filter="monsters">monsters</li>
+                <li class="buttons" data-filter="animals">animals</li>
+            </ul>
+
+            <div class="image-container">
+
+                <a href="gallery/mainbig/mainbig (1).jpg" class="image main-team">
+                    <img src="gallery/maincharacters/main1.jpg" alt="">
+                </a>
+                <a href="gallery/mainbig/mainbig (2).jpg" class="image main-team">
+                    <img src="gallery/maincharacters/main2.jpg" alt="">
+                </a>
+                <a href="gallery/mainbig/mainbig (3).jpg" class="image main-team">
+                    <img src="gallery/maincharacters/main3.jpg" alt="">
+                </a>
+                <a href="gallery/mainbig/mainbig (4).jpeg" class="image main-team">
+                    <img src="gallery/maincharacters/main4.jpeg" alt="">
+                </a>
+                <a href="gallery/mainbig/mainbig (5).jpg" class="image main-team">
+                    <img src="gallery/maincharacters/main5.jpg" alt="">
+                </a>
+                <a href="gallery/mainbig/mainbig (6).jpg" class="image main-team">
+                    <img src="gallery/maincharacters/main6.jpg" alt="">
+                </a>
+                <a href="gallery/mainbig/mainbig (7).jpg" class="image main-team">
+                    <img src="gallery/maincharacters/main7.jpg" alt="">
+                </a>
+                <a href="gallery/mainbig/mainbig (8).jpg" class="image main-team">
+                    <img src="gallery/maincharacters/main8.jpg" alt="">
+                </a>
+                <a href="gallery/mainbig/mainbig (9).jpg" class="image main-team">
+                    <img src="gallery/maincharacters/main9.jpg" alt="">
+                </a>
+
+                <a href="gallery/monsters-big/monsters1-big.jpg" class="image monsters">
+                    <img src="gallery/monsters/monsters1.jpg" alt="">
+                </a>
+                <a href="gallery/monsters-big/monsters2-big.jpg" class="image monsters">
+                    <img src="gallery/monsters/monsters2.jpg" alt="">
+                </a>
+                <a href="gallery/monsters-big/monsters3-big.jpg" class="image monsters">
+                    <img src="gallery/monsters/monsters3.jpg" alt="">
+                </a>
+                <a href="gallery/monsters-big/monsters4-big.jpg" class="image monsters">
+                    <img src="gallery/monsters/monsters4.jpg" alt="">
+                </a>
+                <a href="gallery/monsters-big/monsters5-big.jpg" class="image monsters">
+                    <img src="gallery/monsters/monsters5.jpg" alt="">
+                </a>
+                <a href="gallery/monsters-big/monsters6-big.jpg" class="image monsters">
+                    <img src="gallery/monsters/monsters6.jpg" alt="">
+                </a>
+
+
+                <a href="gallery/animalsbig/animalsbig (1).png" class="image animals">
+                    <img src="gallery/animals/animals (1).jpg" alt="">
+                </a>
+                <a href="gallery/animalsbig/animalsbig (2).jpg" class="image animals">
+                    <img src="gallery/animals/animals (2).jpg" alt="">
+                </a>
+                <a href="gallery/animalsbig/animalsbig (3).jpg" class="image animals">
+                    <img src="gallery/animals/animals (3).jpg" alt="">
+                </a>
+                <a href="gallery/animalsbig/animalsbig (4).jpg" class="image animals">
+                    <img src="gallery/animals/animals (4).jpg" alt="">
+                </a>
+                <a href="gallery/animalsbig/animalsbig (5).jpg" class="image animals">
+                    <img src="gallery/animals/animals (5).jpg" alt="">
+                </a>
+                <a href="gallery/animalsbig/animalsbig (6).jpg" class="image animals">
+                    <img src="gallery/animals/animals (6).jpg" alt="">
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+
+                $('.buttons').click(function() {
+
+                    $(this).addClass('active').siblings().removeClass('active');
+
+                    var filter = $(this).attr('data-filter')
+
+                    if (filter == 'all') {
+                        $('.image').show(400);
+                    } else {
+                        $('.image').not('.' + filter).hide(200);
+                        $('.image').filter('.' + filter).show(400);
+                    }
+
+                });
+
+                $('.gallery').magnificPopup({
+
+                    delegate: 'a',
+                    type: 'image',
+                    gallery: {
+                        enabled: true
+                    }
+
+                });
+
+            });
+        </script>
+
+
+    </section>
+
+</body>
+
+</html>
